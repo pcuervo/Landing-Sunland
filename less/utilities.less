@@ -21,18 +21,63 @@
   position: absolute;
 }
 
+.height-sm{
+  height: @height-small;
+} 
+
+.height-lg{
+  height: 300px;
+} 
+
 
 // Toggling content
 // -------------------------
 .margin-top-md{
   margin-top: 25%
 }
+.margin-left-xs{
+  margin-left: 10%
+}
+.margin-left-sm{
+  margin-left: 20%
+}
+.margin-left-lg{
+  margin-left: 30%
+}
+.margin-bottom-md{
+  margin-bottom: 25%
+}
 .margin-top-xs{
   margin-top: 5%
 }
-.padding-left-large{
-    padding-left: @padding-large-horizontal;
-  } 
+.padding-top-xlg{
+  padding-top: 40%
+}
+.padding-left-md{
+    padding-left: 10%;
+}
+.padding-left-xlg{
+    padding-left: 40%;
+}
+.padding-right-lg{
+    padding-right: 15%;
+}
+.padding-lg-vertical{
+    padding-top:@padding-large-vertical;
+    padding-bottom:@padding-large-vertical;
+}
+.padding-md-vertical{
+    padding-top:@padding-base-vertical;
+    padding-bottom:@padding-base-vertical;
+}
+.padding-xs-horizontal{
+  padding-left: @padding-xs-horizontal;
+  padding-right: @padding-xs-horizontal;
+}
+.padding-sm-horizontal{
+  padding-left: @padding-small-horizontal;
+  padding-right: @padding-small-horizontal;
+}
 .padding-md{
   padding: @padding-medium;
 }
@@ -59,24 +104,14 @@
 .hidden {
   display: none !important;
 }
-
+.divider{
+  border: solid 1px @primary;
+}
 
 // For Affix plugin
 // -------------------------
 
 .affix {
   position: fixed;
-}
-
-
-// Backgrounds
-// -------------------------
-
-body{
-  background-image: url('../../img/back.png');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: repeat;
 }
 
