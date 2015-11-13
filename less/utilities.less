@@ -2,7 +2,6 @@
 // Utility classes
 // --------------------------------------------------
 
-
 // Floats
 // -------------------------
 
@@ -18,10 +17,24 @@
 .pull-left {
   float: left !important;
 }
-
+.absolute{
+  position: absolute;
+}
 
 // Toggling content
 // -------------------------
+.margin-top-md{
+  margin-top: 25%
+}
+.margin-top-xs{
+  margin-top: 5%
+}
+.padding-left-large{
+    padding-left: @padding-large-horizontal;
+  } 
+.padding-md{
+  padding: @padding-medium;
+}
 
 // Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
 .hide {
@@ -53,3 +66,15 @@
 .affix {
   position: fixed;
 }
+
+
+// Backgrounds
+// -------------------------
+
+body{
+  background-image: url('../../img/back.png');
+  background-size:  cover;
+  background-position: top;
+  background-repeat: repeat;
+}
+

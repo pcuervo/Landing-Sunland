@@ -1,8 +1,24 @@
 //
 // Typography
 // --------------------------------------------------
+@font-face{
+    font-family: 'Lato';
+    src: url('../../font/Lato-Regular.otf');
+}
 
+@font-face{
+    font-family: 'Lato-Heavy';
+    src: url('../../font/Lato-Heavy.otf');
+}
 
+@font-face{
+    font-family: 'Lato-Bold';
+    src: url('../../font/Lato-Bold.otf');
+}
+
+*{
+    font-family: 'Lato';
+}
 // Headings
 // -------------------------
 
@@ -20,6 +36,7 @@ h1, h2, h3, h4, h5, h6,
     color: @headings-small-color;
   }
 }
+
 
 h1, .h1,
 h2, .h2,
@@ -98,13 +115,15 @@ mark,
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
+.text-size-xl        { font-size: @font-size-xl; }
+
+.text-strong        {font-family: @headings-font-family}
+
 // Contextual colors
 .text-muted {
   color: @text-muted;
 }
-.text-primary {
-  .text-emphasis-variant(@brand-primary);
-}
+.text-primary { color: @primary; }
 .text-success {
   .text-emphasis-variant(@state-success-text);
 }
@@ -118,15 +137,17 @@ mark,
   .text-emphasis-variant(@state-danger-text);
 }
 
+.text-light{ color: @light}
+
+.text-tertiary{ color: @tertiary}
+
 // Contextual backgrounds
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).
-.bg-primary {
+
   // Given the contrast here, this is the only class to have its color inverted
   // automatically.
-  color: #fff;
-  .bg-variant(@brand-primary);
-}
+
 .bg-success {
   .bg-variant(@state-success-bg);
 }
@@ -140,6 +161,13 @@ mark,
   .bg-variant(@state-danger-bg);
 }
 
+.bg-primary{ background-color: @primary;}
+
+.bg-secondary{ background-color: @secondary;}
+
+.bg-tertiary{ background-color: @tertiary;}
+
+.bg-primary-gray{ background-color: @gray-primary;}
 
 // Page header
 // -------------------------
