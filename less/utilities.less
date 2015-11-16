@@ -21,6 +21,15 @@
   position: absolute;
 }
 
+// position Form desktop
+@media( min-width:768px){
+    .absolute-lg{
+        position: absolute;
+        .pull-right;
+        margin: 15% 0 20% 53%;  
+    }
+}
+
 .height-sm{
   height: @height-small;
 } 
@@ -34,10 +43,12 @@
 // -------------------------
 .margin-top-md      { margin-top: 25% }
 .margin-left-xs     { margin-left: 10% }
+.margin-right-sm    { margin-right: 20% }
 .margin-left-sm     { margin-left: 20% }
 .margin-left-lg     { margin-left: 30% }
 .margin-bottom-md   { margin-bottom: 25% } 
 .margin-top-xs      { margin-top: 5% }
+
 
 .padding-top-xlg    { padding-top: 40% }
 
@@ -50,7 +61,7 @@
 
 .padding-left-md    { padding-left: 10%;}
 .padding-left-xlg   { padding-left: 40%;}
-.padding-right-lg   {  padding-right: 15%;}
+.padding-right-lg   { padding-right: 15%;}
 
 .padding-lg-vertical{
     padding-top:@padding-large-vertical;
@@ -61,7 +72,7 @@
     padding-bottom:@padding-base-vertical;
 }
 .padding-xs-horizontal{
-  padding-left: @padding-xs-horizontal;
+  padding-left: @padding-xs-horizontal; //20px
   padding-right: @padding-xs-horizontal;
 }
 .padding-sm-horizontal{
@@ -120,4 +131,19 @@
 .affix {
   position: fixed;
 }
+
+// padding headlines background desktop
+
+@media( min-width:768px){
+    .bg-tertiary{
+        .padding-left-md;
+        .margin-right-sm;
+    }
+    .bg-secondary:last-child{
+        .margin-left-sm;
+    }
+
+}
+
+
 

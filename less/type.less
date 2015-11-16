@@ -126,6 +126,16 @@ mark,
 
 .text-strong        {font-family: @headings-font-family}
 
+//Font-size headlines desktop  
+  @media( min-width:768px){
+    .text-size-xl{
+      font-size: 2em;
+    }
+    p.text-strong{ 
+      font-size: @font-size-xl; 
+    }
+  }
+
 // Contextual colors
 .text-muted {
   color: @text-muted;
@@ -336,11 +346,25 @@ address {
   line-height: @line-height-base;
 }
 
+//headline right
+.text-headline-right{
+  .text-uppercase;
+  .text-light; 
+  .text-right;
+}
+
+h1{
+  font-size: 21px;
+}
+
+//Texr headline desktop
+
 @media( min-width:768px){
-  h3{
-    font-size: 36px
+  h1{
+    font-size: 42px;
+    .padding-lg-vertical
   }
-  h3.col-lg-6 {
+  h1.col-lg-6 {
     margin-left: 0;
   }
   .text-stronger{
@@ -348,10 +372,4 @@ address {
     font-size: 22px;
     letter-spacing: .2em;
   }
-}
-
-.text-headline-right{
-  .text-uppercase;
-  .text-light; 
-  .text-right;
 }

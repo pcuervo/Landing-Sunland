@@ -1349,6 +1349,14 @@ mark,
 .text-strong {
   font-family: 'Lato';
 }
+@media (min-width: 768px) {
+  .text-size-xl {
+    font-size: 2em;
+  }
+  p.text-strong {
+    font-size: 1.5em;
+  }
+}
 .text-muted {
   color: #777777;
 }
@@ -1549,11 +1557,21 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
+.text-headline-right {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: right;
+}
+h1 {
+  font-size: 21px;
+}
 @media (min-width: 768px) {
-  h3 {
-    font-size: 36px;
+  h1 {
+    font-size: 42px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  h3.col-lg-6 {
+  h1.col-lg-6 {
     margin-left: 0;
   }
   .text-stronger {
@@ -1561,11 +1579,6 @@ address {
     font-size: 22px;
     letter-spacing: .2em;
   }
-}
-.text-headline-right {
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: right;
 }
 code,
 kbd,
@@ -3046,7 +3059,6 @@ select[multiple].input-lg {
 }
 .form-confirm {
   font-size: 1.2em;
-  padding: 50px;
   height: 400px;
 }
 .btn {
@@ -3176,7 +3188,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #ee3e29;
   border-color: #eb2a13;
   font-size: 22px;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -6601,6 +6613,13 @@ button.close {
 .absolute {
   position: absolute;
 }
+@media (min-width: 768px) {
+  .absolute-lg {
+    position: absolute;
+    float: right !important;
+    margin: 15% 0 20% 53%;
+  }
+}
 .height-sm {
   height: 50px;
 }
@@ -6612,6 +6631,9 @@ button.close {
 }
 .margin-left-xs {
   margin-left: 10%;
+}
+.margin-right-sm {
+  margin-right: 20%;
 }
 .margin-left-sm {
   margin-left: 20%;
@@ -6699,6 +6721,15 @@ button.close {
 }
 .affix {
   position: fixed;
+}
+@media (min-width: 768px) {
+  .bg-tertiary {
+    padding-left: 10%;
+    margin-right: 20%;
+  }
+  .bg-secondary:last-child {
+    margin-left: 20%;
+  }
 }
 @-ms-viewport {
   width: device-width;
