@@ -6613,7 +6613,7 @@ button.close {
 .absolute {
   position: absolute;
 }
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   .absolute-lg {
     position: absolute;
     float: right !important;
