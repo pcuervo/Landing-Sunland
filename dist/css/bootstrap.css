@@ -1553,16 +1553,19 @@ address {
   h3 {
     font-size: 36px;
   }
-  p.col-xs-12 {
-    display: block;
-  }
   h3.col-lg-6 {
     margin-left: 0;
   }
-  .img-size-lg {
-    width: 20%;
-    margin-top: 0;
+  .text-stronger {
+    font-family: 'Lato';
+    font-size: 22px;
+    letter-spacing: .2em;
   }
+}
+.text-headline-right {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: right;
 }
 code,
 kbd,
@@ -6625,6 +6628,12 @@ button.close {
 .padding-top-xlg {
   padding-top: 40%;
 }
+@media (min-width: 768px) {
+  .padding-top-xlg {
+    padding-top: 0;
+    margin-left: 10%;
+  }
+}
 .padding-left-md {
   padding-left: 10%;
 }
@@ -6652,6 +6661,16 @@ button.close {
 }
 .padding-md {
   padding: 40px;
+}
+.pd-headline-right {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 15%;
+}
+.pd-headline-left {
+  padding-left: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .hide {
   display: none !important;
@@ -6900,5 +6919,10 @@ body {
 }
 .img-size-xs {
   width: 50px;
+}
+@media (min-width: 768px) {
+  .img-size-lg {
+    width: 23%;
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -32,36 +32,26 @@
 
 // Toggling content
 // -------------------------
-.margin-top-md{
-  margin-top: 25%
+.margin-top-md      { margin-top: 25% }
+.margin-left-xs     { margin-left: 10% }
+.margin-left-sm     { margin-left: 20% }
+.margin-left-lg     { margin-left: 30% }
+.margin-bottom-md   { margin-bottom: 25% } 
+.margin-top-xs      { margin-top: 5% }
+
+.padding-top-xlg    { padding-top: 40% }
+
+@media( min-width:768px){
+    .padding-top-xlg { 
+        padding-top: 0; 
+        .margin-left-xs
+    }
 }
-.margin-left-xs{
-  margin-left: 10%
-}
-.margin-left-sm{
-  margin-left: 20%
-}
-.margin-left-lg{
-  margin-left: 30%
-}
-.margin-bottom-md{
-  margin-bottom: 25%
-}
-.margin-top-xs{
-  margin-top: 5%
-}
-.padding-top-xlg{
-  padding-top: 40%
-}
-.padding-left-md{
-    padding-left: 10%;
-}
-.padding-left-xlg{
-    padding-left: 40%;
-}
-.padding-right-lg{
-    padding-right: 15%;
-}
+
+.padding-left-md    { padding-left: 10%;}
+.padding-left-xlg   { padding-left: 40%;}
+.padding-right-lg   {  padding-right: 15%;}
+
 .padding-lg-vertical{
     padding-top:@padding-large-vertical;
     padding-bottom:@padding-large-vertical;
@@ -81,6 +71,18 @@
 .padding-md{
   padding: @padding-medium;
 }
+
+.pd-headline-right{
+  .padding-lg-vertical;
+  .padding-right-lg;
+}
+
+.pd-headline-left{
+  .padding-left-md;
+  .padding-md-vertical;
+}
+
+
 
 // Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
 .hide {
