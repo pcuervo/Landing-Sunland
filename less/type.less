@@ -83,6 +83,17 @@ p.font-size-sm{
   font-size: 1.2em;
 }
 
+//p bg-secondary 
+  @media (min-width:481px) and (max-device-width: 768px){
+      p.font-size-sm{
+      font-size: 2em;
+    }
+      p.font-size-md{
+      font-size: 2em;
+    }
+  }
+
+
 .lead {
   margin-bottom: @line-height-computed;
   font-size: floor((@font-size-base * 1.15));
@@ -126,8 +137,14 @@ mark,
 
 .text-strong        {font-family: @headings-font-family}
 
-//Font-size headlines desktop  
-  @media( min-width:768px){
+//Font-size headlines desktop 
+  @media( min-width:481px){
+      .text-size-xl{
+      font-size: 2.5em;
+    }
+  }
+
+  @media( min-width:780px){
     .text-size-xl{
       font-size: 2em;
     }
