@@ -6657,6 +6657,10 @@ button.close {
 .margin-top-xs {
   margin-top: 5%;
 }
+.margin-vertical-lg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .padding-left-md {
   padding-left: 10%;
 }
