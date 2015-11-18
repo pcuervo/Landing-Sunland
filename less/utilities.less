@@ -22,7 +22,7 @@
 }
 
 // position Form desktop
-@media( min-width:780px){
+@media(min-width:@screen-sm){
     .absolute-lg{
         position: absolute;
         .pull-right;
@@ -48,16 +48,6 @@
 .margin-left-lg     { margin-left: 30% }
 .margin-bottom-md   { margin-bottom: 25% } 
 .margin-top-xs      { margin-top: 5% }
-
-
-.padding-top-xlg    { padding-top: 40% }
-
-@media( min-width:768px){
-    .padding-top-xlg { 
-        padding-top: 0; 
-        .margin-left-xs
-    }
-}
 
 .padding-left-md    { padding-left: 10%;}
 .padding-left-xlg   { padding-left: 40%;}
@@ -93,6 +83,14 @@
   .padding-md-vertical;
 }
 
+//padding 
+.padding-top-xlg{
+    padding-top: 40%;
+    @media( min-width:@screen-sm){
+        padding-top: 0; 
+        .margin-left-xs
+    }
+}
 
 
 // Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
@@ -134,7 +132,7 @@
 
 // padding headlines background desktop
 
-@media( min-width:780px){
+@media( min-width:@screen-sm){
     .bg-tertiary{
         .padding-left-md;
         .margin-right-sm;

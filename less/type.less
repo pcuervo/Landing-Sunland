@@ -75,23 +75,20 @@ p {
   margin: 0 0 (@line-height-computed / 2);
 }
 
+//p bg-secondary 
 p.font-size-md{
   font-size: 1.5em;
 }
 
 p.font-size-sm{
   font-size: 1.2em;
-}
-
-//p bg-secondary 
-  @media (min-width:481px) and (max-device-width: 768px){
-      p.font-size-sm{
-      font-size: 2em;
-    }
-      p.font-size-md{
-      font-size: 2em;
-    }
+  @media (min-width:@screen-xs){
+    font-size: 2em;
   }
+  @media (min-width:@screen-sm){
+    font-size: 1.3em;
+  }
+}
 
 
 .lead {
@@ -133,26 +130,24 @@ mark,
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
-.text-size-xl        { font-size: @font-size-xl; }
-
-.text-strong        {font-family: @headings-font-family}
-
-//Font-size headlines desktop 
-  @media( min-width:481px){
-      .text-size-xl{
-      font-size: 2.5em;
-    }
-  }
-
-  @media( min-width:780px){
-    .text-size-xl{
-      font-size: 2em;
-    }
-    p.text-strong{ 
+.text-strong{
+  font-family: @headings-font-family;
+  p.text-strong{ 
       font-size: @font-size-xl; 
     }
-  }
+}
 
+//Font-size headlines desktop 
+.text-size-xl{
+  font-size: @font-size-xl;
+  @media( min-width:@screen-xs){
+      font-size: 2em;
+  }
+  @media( min-width:@screen-md){
+    font-size: 2em;
+  }
+}
+    
 // Contextual colors
 .text-muted {
   color: @text-muted;
@@ -370,23 +365,20 @@ address {
   .text-right;
 }
 
+//headings desktop
 h1{
   font-size: 21px;
+  @media( min-width:@screen-sm){
+      font-size: 42px;
+      .padding-lg-vertical
+    }
+    h1.col-lg-6 {
+      margin-left: 0;
+    }
+    .text-stronger{
+      font-family: 'Lato';
+      font-size: 22px;
+      letter-spacing: .2em;
+    }
 }
 
-//Texr headline desktop
-
-@media( min-width:768px){
-  h1{
-    font-size: 42px;
-    .padding-lg-vertical
-  }
-  h1.col-lg-6 {
-    margin-left: 0;
-  }
-  .text-stronger{
-    font-family: 'Lato';
-    font-size: 22px;
-    letter-spacing: .2em;
-  }
-}

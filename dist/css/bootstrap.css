@@ -1299,12 +1299,14 @@ p.font-size-md {
 p.font-size-sm {
   font-size: 1.2em;
 }
-@media (min-width: 481px) and (max-device-width: 768px) {
+@media (min-width: 480px) {
   p.font-size-sm {
     font-size: 2em;
   }
-  p.font-size-md {
-    font-size: 2em;
+}
+@media (min-width: 768px) {
+  p.font-size-sm {
+    font-size: 1.3em;
   }
 }
 .lead {
@@ -1351,23 +1353,23 @@ mark,
 .text-capitalize {
   text-transform: capitalize;
 }
-.text-size-xl {
-  font-size: 1.5em;
-}
 .text-strong {
   font-family: 'Lato';
 }
-@media (min-width: 481px) {
-  .text-size-xl {
-    font-size: 2.5em;
-  }
+.text-strong p.text-strong {
+  font-size: 1.5em;
 }
-@media (min-width: 780px) {
+.text-size-xl {
+  font-size: 1.5em;
+}
+@media (min-width: 480px) {
   .text-size-xl {
     font-size: 2em;
   }
-  p.text-strong {
-    font-size: 1.5em;
+}
+@media (min-width: 992px) {
+  .text-size-xl {
+    font-size: 2em;
   }
 }
 .text-muted {
@@ -1584,14 +1586,14 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  h1.col-lg-6 {
-    margin-left: 0;
-  }
-  .text-stronger {
-    font-family: 'Lato';
-    font-size: 22px;
-    letter-spacing: .2em;
-  }
+}
+h1 h1.col-lg-6 {
+  margin-left: 0;
+}
+h1 .text-stronger {
+  font-family: 'Lato';
+  font-size: 22px;
+  letter-spacing: .2em;
 }
 code,
 kbd,
@@ -6626,7 +6628,7 @@ button.close {
 .absolute {
   position: absolute;
 }
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .absolute-lg {
     position: absolute;
     float: right !important;
@@ -6659,15 +6661,6 @@ button.close {
 }
 .margin-top-xs {
   margin-top: 5%;
-}
-.padding-top-xlg {
-  padding-top: 40%;
-}
-@media (min-width: 768px) {
-  .padding-top-xlg {
-    padding-top: 0;
-    margin-left: 10%;
-  }
 }
 .padding-left-md {
   padding-left: 10%;
@@ -6707,6 +6700,15 @@ button.close {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.padding-top-xlg {
+  padding-top: 40%;
+}
+@media (min-width: 768px) {
+  .padding-top-xlg {
+    padding-top: 0;
+    margin-left: 10%;
+  }
+}
 .hide {
   display: none !important;
 }
@@ -6735,7 +6737,7 @@ button.close {
 .affix {
   position: fixed;
 }
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .bg-tertiary {
     padding-left: 10%;
     margin-right: 20%;
