@@ -1573,7 +1573,7 @@ address {
   text-align: right;
 }
 h1 {
-  font-size: 32px;
+  font-size: 30px;
 }
 @media (min-width: 768px) {
   h1 {
@@ -6649,7 +6649,7 @@ button.close {
   margin-left: 20%;
 }
 .margin-left-lg {
-  margin-left: 30%;
+  margin-left: 25%;
 }
 .margin-bottom-md {
   margin-bottom: 25%;
