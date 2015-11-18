@@ -6957,7 +6957,7 @@ button.close {
 }
 body {
   background-image: url('../../img/back.png');
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
   background-position: top;
   background-repeat: repeat;
