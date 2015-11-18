@@ -1301,11 +1301,6 @@ p.font-size-sm {
 }
 @media (min-width: 480px) {
   p.font-size-sm {
-    font-size: 2em;
-  }
-}
-@media (min-width: 768px) {
-  p.font-size-sm {
     font-size: 1.3em;
   }
 }
@@ -1578,7 +1573,7 @@ address {
   text-align: right;
 }
 h1 {
-  font-size: 21px;
+  font-size: 32px;
 }
 @media (min-width: 768px) {
   h1 {
@@ -6628,7 +6623,7 @@ button.close {
 .absolute {
   position: absolute;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .absolute-lg {
     position: absolute;
     float: right !important;
