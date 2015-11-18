@@ -6958,6 +6958,11 @@ body {
   background-position: top;
   background-repeat: repeat;
 }
+@media (min-width: 480px) and (max-width: 1200px) {
+  .img-logo {
+    width: 100px;
+  }
+}
 .img-size-xs {
   width: 50px;
 }
