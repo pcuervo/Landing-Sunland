@@ -7,7 +7,7 @@
 	$contact_message = isset( $_POST['message'] ) ? $_POST['message'] : '-';
 
 	// Cambiar por  contacto@sunland.mx
-	$to = 'miguel@pcuervo.com';
+	$to = 'contacto@sunland.mx';
 	$subject = 'Informes acerca de clases particulares';
 	$headers = 'From: Sunland School of Arts <contacto@sunland.mx>' . "\r\n";
 	$headers .= "Reply-To: contacto@sunland.mx\r\n";

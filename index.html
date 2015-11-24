@@ -98,7 +98,7 @@
 					<form role="form" data-parsley-validate>
 						<input class="[ form-control ][ margin-top-xs ]" type="text" name="name" placeholder="Nombre" data-parsley-error-message="Este campo es obligatorio" required>
 						<input class="[ form-control ][ margin-top-xs ]" type="email" name="email" placeholder="Correo electrónico" data-parsley-type="email" data-parsley-required-message="Este campo es obligatorio" data-parsley-type-message="Por favor ingresa un correo electrónico válido." required>
-						<input class="[ form-control ][ margin-top-xs ]" type="tel" name="phone" placeholder="Télefono" data-parsley-error-message="Este campo es obligatorio"  required >
+						<input class="[ form-control ][ margin-top-xs ]" type="tel" data-parsley-type="number" name="phone" placeholder="Télefono" data-parsley-required-message="Este campo es obligatorio" data-parsley-type-message="Por favor ingresa un número." required >
 						<select class="[ form-control ][ margin-top-xs ][ arrow ]" name="instrument" placeholder="Instrumento" data-parsley-error-message="Por favor selecciona un instrumento" required>
 							<option disabled selected="selected">Instrumento</option>
 							<option value="Guitarra">Guitarra</option>
