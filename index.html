@@ -92,53 +92,44 @@
 <!-- Formulario -->
 		<section>
 			<div class="[ container ][ ]">
-				<div class="[ col-xs-12 col-sm-7 col-md-5 col-lg-3 absolute-lg ][ padding-md ][ bg-primary-gray ]">
+				<div class="[ col-xs-12 col-sm-7 col-md-5 col-lg-3 absolute-lg ][ padding-md ][ bg-primary-gray ][ js-form-container ]">
 					<p class="[ text-primary font-size-md ]">Llena el formulario y nos pondremos en contacto contigo.</p>
 					<hr class="divider-primary">
-					<form role="form">
-						<input type="name" class="[ form-control ][ margin-top-xs ]" id="" placeholder="Nombre">
-						<input type="email" class="[ form-control ][ margin-top-xs ]" id="" placeholder="Correo electrónico">
-						<input type="phone" class="[ form-control ][ margin-top-xs ]" id="" placeholder="Télefono">
-						<select class="[ form-control ][ margin-top-xs ][ arrow ]"placeholder="Instrumento">
-							<option>Instrumento</option>
-							<option>Guitarra</option>
-							<option>Piano</option>
-							<option>Bajo</option>
-							<option>Batería</option>
-							<option>Canto</option>
+					<form role="form" data-parsley-validate>
+						<input class="[ form-control ][ margin-top-xs ]" type="text" name="name" placeholder="Nombre" data-parsley-error-message="Este campo es obligatorio" required>
+						<input class="[ form-control ][ margin-top-xs ]" type="email" name="email" placeholder="Correo electrónico" data-parsley-type="email" data-parsley-required-message="Este campo es obligatorio" data-parsley-type-message="Por favor ingresa un correo electrónico válido." required>
+						<input class="[ form-control ][ margin-top-xs ]" type="tel" name="phone" placeholder="Télefono" data-parsley-error-message="Este campo es obligatorio"  required >
+						<select class="[ form-control ][ margin-top-xs ][ arrow ]" name="instrument" placeholder="Instrumento" data-parsley-error-message="Por favor selecciona un instrumento" required>
+							<option disabled selected="selected">Instrumento</option>
+							<option value="Guitarra">Guitarra</option>
+							<option value="Piano">Piano</option>
+							<option value="Bajo">Bajo</option>
+							<option value="Batería">Batería</option>
+							<option value="Canto">Canto</option>
 						</select>
-						<textarea class="[ form-control ][ margin-top-xs ]" rows="5" id="" placeholder="Mensaje"></textarea>
+						<textarea class="[ form-control ][ margin-top-xs ]" name="message" rows="5" placeholder="Mensaje"></textarea>
 						<div class="[ text-right ][ text-strong text-size-xl ]">
 							<button type="submit" class="[ btn btn-primary ][ margin-top-xs ]">envíar</button>
 						</div>
 					</form>			
 				</div>
-			</div>
-
-<!-- Formulario Confirmación  
-			<div class="[ container ] [  ]">
-				<div class="[ col-xs-12 col-sm-8 col-lg-3 ][ padding-md ][ bg-primary-gray ]">
-					<p class="[ text-primary font-size-md invisible ]">Llena el formulario y nos pondremos en contacto contigo.</p>
-					<hr class="divider-light">
-					<form class="[ form-confirm ][ text-center ]">
-						<p class="[ text-tertiary text-center ]">Gracias por contactarnos en menos de 24 horas te enviaremos una respuesta.</p>
-						<p class="[ text-tertiary text-center ]">www.sunland.com</p>
-						<a href="https://www.facebook.com/sunlandmexico">
-							<img src="img/icons/facebook.png" alt="">
-						</a>
-						<a href="https://twitter.com/sunlandmx">
-							<img src="img/icons/twitter.png" alt="">
-						</a>
-						<a href="https://www.youtube.com/channel/UCPZ8PbTvkmwwjJ8pxgWm2ig">
-							<img src="img/icons/youtube.png" alt="">
-						</a>
-						<a href="https://www.instagram.com/sunland_mexico/">
-							<img src="img/icons/instagram.png" alt="">
-						</a>
-					</form>			
+				<div class="[ col-xs-12 col-sm-7 col-md-5 col-lg-3 absolute-lg ][ padding-md ][ bg-primary-gray ][ js-thankyou ][ hidden ]">
+					<p class="[ text-tertiary text-center ]">¡Gracias por contactarnos <span class="[ js-name ]"></span>! En menos de 24 horas te enviaremos una respuesta.</p>
+					<p class="[ text-tertiary text-center ]">www.sunland.com</p>
+					<a href="https://www.facebook.com/sunlandmexico">
+						<img src="img/icons/facebook.png" alt="">
+					</a>
+					<a href="https://twitter.com/sunlandmx">
+						<img src="img/icons/twitter.png" alt="">
+					</a>
+					<a href="https://www.youtube.com/channel/UCPZ8PbTvkmwwjJ8pxgWm2ig">
+						<img src="img/icons/youtube.png" alt="">
+					</a>
+					<a href="https://www.instagram.com/sunland_mexico/">
+						<img src="img/icons/instagram.png" alt="">
+					</a>
 				</div>
 			</div>
--->
 
 		</section>
 <!-- Call to action -->
@@ -162,13 +153,23 @@
 		</section>
 
 
-
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/functions.js"></script>
+
 		<script>
-			$('#send_btn').popover({content: 'Thank You'},'click');
+			$(document).ready(function(){
+
+				$('[data-parsley-validate]').parsley();
+				$('form').on('submit', function(e){
+					e.preventDefault();
+					sendContactEmail( this );
+				});
+
+			});
 		</script>
 
 	</body>
